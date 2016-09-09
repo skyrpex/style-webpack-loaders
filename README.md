@@ -16,8 +16,19 @@ import {
 
 export default {
   // ...
+  module: {
+    loaders: {
+      ...loaders(/* { sourceMap: true, extract: true } */),
+    },
+  },
+  vue: {
+    loaders: {
+      ...vueLoaders(/* { sourceMap: true, extract: true } */),
+    },
+  },
   plugins: [
-    new ManifestPlugin('path/to/manifest.json'),
+    // Extract styles to a file
+    new ExtractTextPlugin('css/[name].[contenthash].css'),
   ],
 };
 ```
