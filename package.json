@@ -1,7 +1,7 @@
 {
   "name": "@skyrpex/style-webpack-loaders",
   "description": "Provides helpers for creating style loaders",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publishConfig": {
     "access": "public"
   },
