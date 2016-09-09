@@ -42,7 +42,7 @@ export const vueLoaders = (options = {}) => {
 // Generate loaders for standalone style files (outside of .vue)
 export const loaders = options => {
   const output = [];
-  each(exports.cssLoaders(options), (loader, extension) => {
+  each(vueLoaders(options), (loader, extension) => {
     output.push({
       test: new RegExp(`\\.${extension}$`),
       loader,
