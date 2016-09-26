@@ -21,7 +21,10 @@ export const vueLoaders = (options = {}) => {
     }).join('!');
 
     if (options.extract) {
-      return ExtractTextPlugin.extract('vue-style-loader', sourceLoader);
+      return ExtractTextPlugin.extract({
+        fallbackLoader: 'vue-style-loader',
+        loader: sourceLoader,
+      });
     }
 
     return ['vue-style-loader', sourceLoader].join('!');
