@@ -6,7 +6,7 @@ export { ExtractTextPlugin };
 export const vueLoaders = (options = {}) => {
   // generate loader string to be used with extract text plugin
   function generateLoaders(loaders) {
-    const sourceLoader = loaders.map(loader => {
+    const sourceLoader = loaders.map((loader) => {
       let extraParamChar;
       if (/\?/.test(loader)) {
         // eslint-disable-next-line
@@ -43,7 +43,7 @@ export const vueLoaders = (options = {}) => {
 };
 
 // Generate loaders for standalone style files (outside of .vue)
-export const loaders = options => {
+export const loaders = (options) => {
   const output = [];
   each(vueLoaders(options), (loader, extension) => {
     output.push({
